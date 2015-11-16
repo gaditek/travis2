@@ -1,6 +1,8 @@
 language: csharp
-solution: TestObj\TestObj.sln
+solution: TestObj.sln
 install:
-  - sudo apt-get install -y gtk-sharp2
-  - nuget restore TestObj\TestObj.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./TestObj/TestObj/bin/Debug/TestObj.dll
+	- nuget restore TestObj.sln
+	- nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:
+	- xbuild /p:Configuration=Release TestObj.sln
+	- mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./TestObj/bin/Release/TestObj.dll

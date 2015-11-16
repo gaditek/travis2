@@ -1,0 +1,8 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Debug" />
+  <Config name="Debug" binpathtype="Auto">
+    <assembly path="TestObj\TestObj\bin\Debug\TestObj.dll" />
+    <assembly path="TestObj\TestObj\bin\Debug\TestObj.dll" />
+  </Config>
+  <Config name="Release" binpathtype="Auto" />
+</NUnitProject>
