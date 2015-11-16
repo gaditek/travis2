@@ -1,8 +1,8 @@
 language: csharp
 solution: TestObj.sln
 install:
-	- nuget restore TestObj.sln
-	- nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+  - nuget restore TestObj.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-	- xbuild /p:Configuration=Release TestObj.sln
-	- mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./TestObj/bin/Release/TestObj.dll
+  - xbuild /p:Configuration=Release TestObj.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./TestObj/bin/Release/TestObj.dll
